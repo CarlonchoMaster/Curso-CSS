@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+    /> 
+    <link rel="stylesheet" href="styles/flex.css" />
+  </head>
+  <body>
+    <div class="test">
+      <h1>flex-start</h1>
+      <ul class="flexstart">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+    <div class="test">
+      <h1>flex-end</h1>
+      <ul class="flexend">
+        <li>1</li>
+        <li>2</li>
+        <li style="align-self: flex-start">3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+    <div class="test">
+      <h1>center</h1>
+      <ul class="flexcenter">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+    <div class="test">
+      <h1>Stretch</h1>
+      <ul class="stretch">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+    <div class="test">
+      <h1>Baseline</h1>
+      <ul class="baseline">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+    <div class="container">
+      <header class="bg-dark header-navbar">Flex Box alineado a la izquierda</header>
+      <nav class="navbar">
+        <a class="navbar-link" href="#">Enlace 01</a>
+        <a class="navbar-link" href="#">Enlace 02</a>
+        <a class="navbar-link" href="#">Enlace 03</a>
+        <a class="navbar-link" href="#">Enlace 04</a>
+      </nav>
+    </div>
+    <div class="container">
+      <section>
+        <h2 class="bg-dark header-navbar">Flexbox - Catalogo de Imagenes</h2>        
+        <article class="list-album">          
+          <img src="images/image01.jpg" alt="" class="list-image">
+          <img src="images/image02.jpg" alt="" class="list-image">
+          <img src="images/image03.jpg" alt="" class="list-image">
+          <img src="images/image04.jpg" alt="" class="list-image">
+          <img src="images/image05.jpg" alt="" class="list-image">
+          <img src="images/image06.jpg" alt="" class="list-image">
+        </article>
+      </section>
+    </div>
+    <div class="container">
+      <h2>flex-wrap: nowrap</h2>
+      <article class="list-album f-nowrap">                
+        <img src="images/image01.jpg" alt="" class="list-image">
+        <img src="images/image02.jpg" alt="" class="list-image">
+        <img src="images/image03.jpg" alt="" class="list-image">
+        <img src="images/image04.jpg" alt="" class="list-image">
+        <img src="images/image05.jpg" alt="" class="list-image">
+        <img src="images/image06.jpg" alt="" class="list-image">
+        <img src="images/image01.jpg" alt="" class="list-image">
+        <img src="images/image02.jpg" alt="" class="list-image">
+        <img src="images/image03.jpg" alt="" class="list-image">
+        <img src="images/image04.jpg" alt="" class="list-image">
+        <img src="images/image05.jpg" alt="" class="list-image">
+        <img src="images/image06.jpg" alt="" class="list-image">
+        <img src="images/image01.jpg" alt="" class="list-image">
+        <img src="images/image02.jpg" alt="" class="list-image">
+        <img src="images/image03.jpg" alt="" class="list-image">
+        <img src="images/image04.jpg" alt="" class="list-image">
+        <img src="images/image05.jpg" alt="" class="list-image">
+        <img src="images/image06.jpg" alt="" class="list-image">
+        <img src="images/image01.jpg" alt="" class="list-image">
+        <img src="images/image02.jpg" alt="" class="list-image">
+        <img src="images/image03.jpg" alt="" class="list-image">
+        <img src="images/image04.jpg" alt="" class="list-image">
+        <img src="images/image05.jpg" alt="" class="list-image">
+        <img src="images/image06.jpg" alt="" class="list-image">
+      </article>
+      <h2>flex-wrap: wrap</h2>
+      <article class="list-album f-wrap">                  
+        <img src="images/image01.jpg" alt="" class="list-image">
+        <img src="images/image02.jpg" alt="" class="list-image">
+        <img src="images/image03.jpg" alt="" class="list-image">
+        <img src="images/image04.jpg" alt="" class="list-image">
+        <img src="images/image05.jpg" alt="" class="list-image">
+        <img src="images/image06.jpg" alt="" class="list-image">
+        <img src="images/image01.jpg" alt="" class="list-image">
+        <img src="images/image02.jpg" alt="" class="list-image">
+        <img src="images/image03.jpg" alt="" class="list-image">
+        <img src="images/image04.jpg" alt="" class="list-image">
+        <img src="images/image05.jpg" alt="" class="list-image">
+        <img src="images/image06.jpg" alt="" class="list-image">
+        <img src="images/image01.jpg" alt="" class="list-image">
+        <img src="images/image02.jpg" alt="" class="list-image">
+        <img src="images/image03.jpg" alt="" class="list-image">
+        <img src="images/image04.jpg" alt="" class="list-image">
+        <img src="images/image05.jpg" alt="" class="list-image">
+        <img src="images/image06.jpg" alt="" class="list-image">
+        <img src="images/image01.jpg" alt="" class="list-image">
+        <img src="images/image02.jpg" alt="" class="list-image">
+        <img src="images/image03.jpg" alt="" class="list-image">
+        <img src="images/image04.jpg" alt="" class="list-image">
+        <img src="images/image05.jpg" alt="" class="list-image">
+        <img src="images/image06.jpg" alt="" class="list-image">
+      </article>
+      <h2>flex-wrap: wrap-reverse</h2>
+      <article class="list-album f-wrap-reverse">                  
+        <img src="images/image01.jpg" alt="" class="list-image">
+        <img src="images/image02.jpg" alt="" class="list-image">
+        <img src="images/image03.jpg" alt="" class="list-image">
+        <img src="images/image04.jpg" alt="" class="list-image">
+        <img src="images/image05.jpg" alt="" class="list-image">
+        <img src="images/image06.jpg" alt="" class="list-image">
+        <img src="images/image01.jpg" alt="" class="list-image">
+        <img src="images/image02.jpg" alt="" class="list-image">
+        <img src="images/image03.jpg" alt="" class="list-image">
+        <img src="images/image04.jpg" alt="" class="list-image">
+        <img src="images/image05.jpg" alt="" class="list-image">
+        <img src="images/image06.jpg" alt="" class="list-image">
+        <img src="images/image01.jpg" alt="" class="list-image">
+        <img src="images/image02.jpg" alt="" class="list-image">
+        <img src="images/image03.jpg" alt="" class="list-image">
+        <img src="images/image04.jpg" alt="" class="list-image">
+        <img src="images/image05.jpg" alt="" class="list-image">
+        <img src="images/image06.jpg" alt="" class="list-image">
+        <img src="images/image01.jpg" alt="" class="list-image">
+        <img src="images/image02.jpg" alt="" class="list-image">
+        <img src="images/image03.jpg" alt="" class="list-image">
+        <img src="images/image04.jpg" alt="" class="list-image">
+        <img src="images/image05.jpg" alt="" class="list-image">
+        <img src="images/image06.jpg" alt="" class="list-image">
+      </article>
+    </div>
+  </body>
+</html>

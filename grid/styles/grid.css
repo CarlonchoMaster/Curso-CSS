@@ -1,0 +1,37 @@
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 4em 6em 1fr 4em;      
+    gap: 1em;
+}
+
+header {
+    background-color: yellow;
+    grid-column: span 12;
+}
+
+aside {
+    background: cyan;
+    grid-column: span 3;
+}
+
+footer {
+    background-color: magenta;
+    grid-row: 4;
+    grid-column: span 12;
+}
+
+main {
+    background-color: lime;
+    grid-column: span 9;
+}
+
+.feature {
+    background-color: royalblue;
+    grid-column: span 4;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+

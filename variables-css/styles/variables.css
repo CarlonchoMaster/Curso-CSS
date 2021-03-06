@@ -1,0 +1,18 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-letter: red;    
+}
+
+[class^="p"] {
+    color: var(--color-letter);
+}
+
+.p-02 {    
+    --color-letter: blue;    
+}
+
+
+

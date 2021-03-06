@@ -1,0 +1,268 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-gray-h1: #dddddd;
+  --bg-gray-h2: #cccccc;
+  --bg--gray-h3: #bbbbbb;
+  --bg-gray-h4: #aaaaaa;
+  --bg-gray-h5: #999999;
+  --bg-gray-h6: #888888;
+}
+
+body {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;  
+}
+
+.parrafo1 {
+  text-decoration-line: overline underline;
+  text-decoration-color: red;
+  text-decoration-style: dashed;
+}
+
+h1 {
+  letter-spacing: 1rem;
+  word-spacing: 1rem;
+  text-transform: uppercase;
+  color: cyan;
+  background: url(../images/fondo.jpg) left center no-repeat scroll;
+  
+}
+
+h2 {
+  letter-spacing: 0.66rem;
+  word-spacing: 0.66rem;
+  text-transform: uppercase;
+  color: magenta;
+  font-family: "Times New Roman", Courier, Arial;
+}
+
+h3 {
+  letter-spacing: 0.33rem;
+  word-spacing: 0.33rem;
+  text-transform: uppercase;
+  color: yellow;
+}
+
+h1 em {
+  color: var(--bg-gray-h1);
+}
+
+h2 em {
+  color: var(--bg-gray-h2);
+}
+
+h3 em {
+  color: var(--bg--gray-h3);
+}
+
+h4 em {
+  color: var(--bg-gray-h4);
+}
+
+h5 em {
+  color: var(--bg-gray-h5);
+}
+
+h6 em {
+  color: var(--bg-gray-h6);
+}
+
+.subrayado {
+  color: #0a0;
+  text-decoration-line: underline;
+}
+
+.tachado {
+  color: #0a0;
+  text-decoration-line: line-through;
+}
+
+.bordeado {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #00f;
+}
+
+.secondary-title {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-style: solid;
+  border-color: rebeccapurple;
+}
+
+.padding-title {
+  padding: 10px 20px;
+}
+
+.margin-title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.first-list {
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+.secondary-list {
+  list-style-type: circle;
+  list-style-position: outside;
+}
+
+view-more {
+    font-size: 2em;
+}
+
+.view-more:link {
+    color: hsl(240deg, 70%, 60%);
+}
+.view-more:visited {
+    color: red;
+}
+.view-more:hover {    
+    color: yellow;
+}
+.view-more:focus {
+    color: green;
+}
+view-more:active {
+    color: cyan;
+}
+
+.sidebar {
+    list-style-type: none;    
+    background-color: #F7FAE7;
+    width: 10rem; 
+    padding-left: 0;   
+    text-align: center;
+    border-top: 1px solid #D5DAB7;
+}
+
+.sidebar-item {
+    padding: .5em; 
+    border-bottom: 1px solid #D5DAB7;
+    cursor: pointer;    
+    color: red;
+}
+
+.sidebar-item:hover {
+  background-color: #35679a;        
+  color: white;
+}
+
+.sidebar-link {    
+    text-decoration-line: none;
+    color: inherit;
+}
+
+.navbar {
+  list-style-type: none;          
+  text-align: center;
+  padding-left: 0;  
+}
+
+.navbar-item {
+  float: left;
+  width: 10rem;
+  background-color: #F7FAE7;
+  padding: .5em;  
+  color: red;
+  border-right: 1px solid #D5DAB7;
+  cursor: pointer;
+  display: block;
+}
+
+.navbar-item:hover {
+  background-color: #35679a;        
+  color: white;
+}
+
+.navbar-link {
+  text-decoration-line: none;
+  color: inherit;  
+}
+
+.narrow-paragraph {
+  width: 200px;  
+}
+
+.vertical-form {
+  border: 2px solid #e5e7e9;
+  padding: 2em;
+  width: 25%;
+}
+
+.form-group {
+  padding-top: .5em;
+  padding-bottom: .5em;
+  margin-bottom: .25em;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: .2em;
+}
+
+.form-control {
+  padding: .5em;
+  border: 2px solid #bdc3c7;
+  color: #888888;
+  font-size: 14px;
+  border-radius: .25em;  
+  width: 100%;
+}
+
+.form-control:focus {
+  outline-color: #aed6f1;  
+}
+
+.btn {
+  padding: .75em;  
+  border-width: 0;
+  border-radius: .25em;  
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: #fff;  
+}
+
+.table {
+  border-collapse: collapse;
+  border: 1px solid #999999; 
+}
+
+.table th {
+  font-weight: 700;
+  padding: .5em;
+  border-right: 1px solid #999999;
+}
+
+.table td {
+  padding: .5em;  
+  border-right: 1px solid #999999;
+}
+
+.table thead tr {
+  background-color: #F2F3F4;
+  border-bottom: 1px solid #999999;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #999999;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #F2F3F4;
+}
+
+
+
+
+

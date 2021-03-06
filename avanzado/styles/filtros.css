@@ -1,0 +1,65 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.container div::before {
+    content: attr(class);
+    font-size: 3.5rem;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+}
+
+.active {
+    grid-column: span 2;
+    order: -1;
+}
+
+img {
+    width: 100%;
+}
+
+.grayscale {
+    filter: grayscale(1);
+}
+
+.sepia {
+    filter: sepia(1);
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.hue-rotate {
+    filter: hue-rotate(330deg);
+}
+
+.brightness {
+    filter: brightness(1.5);
+}
+
+.contrast {
+    filter: contrast(1.5);
+}
+
+.saturate {
+    filter: saturate(.5);
+}
+
+.opacity {
+    filter: opacity(.5);
+}
+
+.drop-shadow img {
+    filter: drop-shadow(3px 3px 5px #333);
+    /* box-shadow: 3px 3px 5px #333; */
+}

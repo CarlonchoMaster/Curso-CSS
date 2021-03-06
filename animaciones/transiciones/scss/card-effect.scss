@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    width: 16em;
+    position: relative;    
+    transition: transform .3s;
+    overflow: hidden;
+    &__img {
+        width: 100%;
+        display: block;
+        transition: transform .2s;
+    }
+    &__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 1em;
+        // background-color: hsla(340, 80, 60, .8);
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        transform: translate(0, 100%);
+        transition: transform .2s;                
+        z-index: 100;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 1em;
+        background: linear-gradient(hsla(340, 80, 60, .8), hsla(200, 80, 60, .8));
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        border-radius: 50%;
+        transform: translate(-50%, 50%) scale(0.01);
+        transition: inherit;
+    }
+    &:hover {
+        .card__content {
+            transform: translate(0);
+            transition: transform .2s .3s;
+        }
+
+        .card__img {
+            transform: scale(1.5) rotate(10deg);
+            transition: transform .2s .3s;
+        }
+
+        &::after {
+            transform: scale(2.5);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    counter-reset: contador;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation-name: contar;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    &::after {
+        content: counter(contador);
+        font-size: 16em;
+    }
+    @keyframes contar {
+        @for $i from 1 through 10 {
+            #{$i*10%} {
+                counter-increment: contador $i;
+                background: hsl($i * 36, 100, 50);
+                color: hsl($i * 36 + 180, 100, 50);
+            }
+        }        
+    }
+}

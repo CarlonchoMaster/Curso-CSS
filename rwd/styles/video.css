@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.video {
+  /* height: 0; */
+  /* padding-bottom: 56.25%; */
+  /* padding-top: 56.25%; */
+  position: relative;
+  width: 100%;
+  padding: 0;
+  /* overflow: hidden; */
+}
+
+.video::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+.video iframe,
+.video video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}

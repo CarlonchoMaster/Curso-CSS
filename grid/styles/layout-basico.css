@@ -1,0 +1,108 @@
+/* Generales */
+html * {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Principal */
+.principal {
+    height: 100vh;
+    display: grid;    
+    grid-template-areas: 'header' 'aside-01' 'content' 'section-01' 'section-02' 'aside-02' 'footer';    
+}
+
+/* Cabecera */
+.cabecera {
+    background-color: aquamarine;
+    padding: 1em;   
+    grid-area: header; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenido */
+.contenido {
+    background-color: aliceblue;
+    padding: 1em;
+    grid-area: content;
+}
+
+.contenido__img {
+    width: 100%;
+    height: auto;
+}
+
+/* Izquierda */
+.izquierda {
+    background-color: beige;
+    padding: 1em;
+    grid-area: aside-01;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Anexos */
+.anexo1 {
+    background-color: goldenrod;
+    padding: 1em;
+    grid-area: section-01;
+}
+
+.anexo2 {
+    background-color: darkcyan;
+    padding: 1em;
+    grid-area: section-02;
+}
+
+/* Derecha */
+.derecha {
+    background-color: bisque;
+    padding: 1em;
+    grid-area: aside-02;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Pie */
+.pie {
+    background-color: black;
+    color: white;
+    padding: 1em;
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .principal {
+        grid-template-areas: 'header header header' 
+        'aside-01 content content' 
+        'aside-02 section-01 section-02' 
+        'footer footer footer';    
+        grid-template-columns: 200px 1fr 200px;    
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .principal { 
+        grid-template-areas: 'header header header header' 
+        'aside-01 content content aside-02' 
+        'aside-01 section-01 section-02 aside-02' 
+        'footer footer footer footer';
+        grid-template-columns: 250px repeat(2,1fr) 250px;
+    }
+}

@@ -1,0 +1,22 @@
+body {
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; }
+
+a {
+  color: #ffffff;
+  background-color: red;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5em 1em;
+  position: relative;
+  left: 0;
+  transition: background-color 0.5s 0.2s, color 0.5s 0.2s, transform 0.2s, left 0.5s .6s; }
+
+p:hover a {
+  background-color: black;
+  color: yellow;
+  transform: translateY(-10%);
+  left: -500%; }

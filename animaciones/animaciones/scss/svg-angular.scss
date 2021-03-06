@@ -1,0 +1,56 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.bg {
+  animation: bg 2s forwards;
+  fill: none;  
+  stroke: #e23237;    
+  @keyframes bg {
+    0% {      
+      stroke-dasharray: 0;      
+      opacity: 0;   
+      stroke-width: 2px;   
+    }
+    90% {
+      stroke-dasharray: 900px;      
+      fill: none;
+      stroke-width: 2px;
+    }
+    100% {        
+        stroke-width: 0;    
+        fill: #e23237;
+    }
+  }
+}
+
+.bg-2 {
+  animation: bg-2 2s 2s forwards;  
+  fill: transparent;
+  @keyframes bg-2 {
+    from {
+      opacity: 0;      
+    }
+    to {
+        fill: #B52E31;
+    }
+  }
+}
+
+.a {
+  animation: a 1s 4s forwards;
+  fill: transparent;      
+  transform-origin: center center;
+  @keyframes a {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }    
+    to {
+        fill: #fff;
+    }
+  }
+}

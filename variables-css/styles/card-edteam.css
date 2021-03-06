@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --body-bg: #fbfbfb;
+  --card-bg: #fff;
+  --title-color: #000;
+  --text-color: gray;
+  --footer-bg: #fcfcfc;
+  --shadow: 0 2px 4px rgba(174, 190, 205, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg: #1a252d;
+    --card-bg: #2a3b47;
+    --title-color: white;
+    --text-color: lightgray;
+    --footer-bg: #22303a;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+  background: var(--body-bg);
+}
+
+.card {
+  border-radius: 0.5rem;
+  max-width: 300px;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  color: var(--text-color);
+}
+
+.header {
+  position: relative;
+}
+
+.level {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  font-weight: 600;
+  color: white;
+}
+
+.image {
+  width: 100%;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.content h3 {
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  padding: 0.75rem 1rem;
+  background: var(--footer-bg);
+}

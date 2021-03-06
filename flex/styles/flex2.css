@@ -1,0 +1,47 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif;
+}
+
+.header-title {
+    background-color: black;
+    color: white;    
+    font-size: 1.2rem;    
+    padding: .8em;
+    text-align: right;
+}
+
+.cluster-article {
+    display: flex;    
+}
+
+[class^="article"] {
+    padding: .8em;    
+}
+
+[class^="article"] h2 {
+    text-align: center;
+}
+
+[class^="article"] img{
+    width: 100%;
+}
+
+.article-01 {
+    background-color: #7ebdbb;
+}
+
+.article-02 {
+    background-color: #b6ebb3;
+}
+
+.article-03 {
+    background-color: #bacee3;
+    order: -1;
+}

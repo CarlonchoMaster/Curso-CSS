@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;  
+  margin: 0;
+  padding: 0;
+}
+
+$button-color: steelblue;
+
+body {
+    padding: 1rem;
+}
+
+.container {
+    margin-bottom: 1rem;
+}
+
+.btn {
+    padding: .5rem .75rem;
+    border-radius: 0.25rem;
+    border: 1px solid #999;
+    background-color: #eee;
+    color: #111;                
+    &:hover {
+        background-color: darken(#eee, 5%);        
+    }
+    &:focus {
+        outline-width: 0;
+    }
+    &-primary {
+        background-color: $button-color;
+        border-color: darken($button-color, 5%);    
+        color: white;
+        &:hover {
+            background-color: darken($button-color, 5%);
+        }
+    }    
+}
+

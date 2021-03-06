@@ -1,0 +1,31 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container  {
+    margin-bottom: 1rem;
+}
+
+.list {
+    list-style-type: none;
+}
+.item{
+    font-size: 2rem;
+}
+/*
+.item::before {
+    content: '';
+    display: inline-block;
+    background-image: url(https://www.flaticon.com/svg/static/icons/svg/716/716225.svg);
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+}
+*/
+
+.item::before {
+    content: '\2714';
+    margin-right: 0.25rem;
+}

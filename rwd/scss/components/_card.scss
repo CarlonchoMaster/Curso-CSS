@@ -1,0 +1,32 @@
+.card {
+    &__img img {
+        display: block;
+    }
+    &__content {
+        padding: 1rem;
+        border: 1px solid var(--color-border);
+    }
+    &__subtitle {
+        margin-top: -1rem;
+        margin-bottom: 0.5rem;
+    }
+    &__footer {
+        border-top: 1px solid var(--color-border);
+        margin-top: 1rem;
+        padding-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.cards-grid {
+    @include from(l) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        max-width: $max-width;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

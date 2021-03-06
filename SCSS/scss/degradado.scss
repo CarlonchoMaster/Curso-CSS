@@ -1,0 +1,21 @@
+@import 'mixins/mixins';
+@import 'mixins/function';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+$colors: hsl(0, 1, 1);
+
+@for $var from 50 through 1 {
+    $colors: append($colors, hsl(0, $var*2, $var), comma);
+}
+
+body {
+    // background-image: linear-gradient(to bottom left, $colors);
+    min-height: 100vh;
+}
+
+.text {
+    text-shadow: long-shadow(50, red);
+}

@@ -1,0 +1,35 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    min-height: 100vh;
+}
+
+.element {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;    
+    position: relative;
+}
+
+
+.element::before {
+    content: '';
+    display: block;       
+    background-color: gray;
+    width: 95%;    
+    left: 2.5%;
+    height: 1rem;
+    border-radius: 100%;
+    position: absolute;
+    bottom: -.5rem;
+    filter: blur(5px);
+    z-index: -1;
+} 

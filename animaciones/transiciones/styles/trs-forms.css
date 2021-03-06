@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+form {
+  margin: 2em; }
+
+input {
+  border: 1px solid #ccc; }
+  input:focus {
+    box-shadow: none;
+    outline: none;
+    background-color: yellow; }

@@ -1,0 +1,33 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;    
+}
+
+.header {
+    background-color: royalblue;
+    color: white;
+    padding: .5em;
+}
+
+.footer {
+    background-color: royalblue;
+    color: white;
+    padding: 1em .5em;
+    clear: left;
+}
+
+.col-01 {
+    float: left;
+    width: 200px;
+    border-right: 1px solid #888888;
+    height: 300px;
+    padding: 1rem;
+}
+
+.col-02 {
+    margin-left: 210px;
+    padding: 1rem;
+}

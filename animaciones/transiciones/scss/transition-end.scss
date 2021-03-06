@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.ball {
+  width: 100px;
+  height: 100px;
+  background-color: tomato;
+  border-radius: 50%;
+  position: relative;
+  left: 0;
+  top: 0;
+  transition: left 0.5s, background-color .5s, top 0.5s 0.5s;
+  .animate & {
+    transition: left 2s, background-color 4s, top 2s 2s;
+    left: calc(100vw - 100px);
+    top: calc(100vh - 100px);
+    background-color: green;
+  }
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+}
+
+button {
+  margin: auto;
+}

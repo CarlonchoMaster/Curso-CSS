@@ -1,0 +1,49 @@
+*, *::before, *::after {
+    box-sizing: border-box;    
+}
+
+.is-position {
+    position: relative;
+}
+
+.square {
+    position: absolute;
+    width: 100px;    
+}
+
+.square:first-child {
+    background-color: tomato;
+    height: 50px;
+    top: 0;    
+    z-index: 30;
+}
+
+.square:nth-child(2) {
+    background-color: yellow;
+    height: 100px;    
+    top: 40px;
+    z-index: 20;
+}
+
+.square:last-child {
+    background-color: violet;
+    height: 150px;     
+    top: 80px;
+    z-index: 10;
+}
+
+.sidebar-bottom {
+    height: 200px;
+    width: 100%;
+    background-color: teal;
+    position: fixed;
+    bottom: 0;
+}
+
+.sidebar-right {
+    width: 200px;
+    height: 100%;
+    background-color: burlywood;
+    position: fixed;
+    right: 0;
+}

@@ -1,0 +1,33 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 1rem;
+    counter-reset: chapter;
+}
+
+section {
+    counter-increment: chapter;
+}
+
+section h2 {    
+    counter-reset: subchapter;
+    margin-bottom: 1rem;
+}
+
+section h2::after {
+    content: ' Nº ' counter(chapter);
+}
+
+section p {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    counter-increment: subchapter;
+}
+
+section p::before {
+    content: counter(chapter) '.' counter(subchapter) ' ';
+} 

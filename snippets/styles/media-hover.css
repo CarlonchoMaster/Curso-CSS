@@ -1,0 +1,39 @@
+.button {
+    background: darkorange;
+    color: white;
+    border: none;
+    padding: 1rem;
+    padding-right: 3rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  .button svg {
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 0.6rem;
+    fill: currentColor;
+    opacity: 1;
+  }
+  
+  @media (hover: hover) {
+    .button {
+      padding-right: 1rem;
+      cursor: pointer;
+    }
+  
+    .button svg {
+      opacity: 0;
+    }
+  
+    .button:hover {
+      padding-right: 3rem;
+    }
+  
+    .button:hover svg {
+      opacity: 1;
+    }
+  }
+  

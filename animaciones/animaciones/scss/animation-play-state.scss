@@ -1,0 +1,49 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.heart {
+    --size: 200px;
+    background-color: red;
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: .6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: inherit;
+        top: -50%;
+        left: 0;
+        border-radius: 50%;
+    }
+
+    &::after {
+        top: 0;
+        left: 50%;
+    }
+
+    &:hover {
+        animation-play-state: paused;        
+    }
+
+    @keyframes beat {
+        to {
+            transform: rotate(-45deg) scale(1.2);
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@function long-shadow($n, $color) {
+    $shadow: #{1px 1px $color};
+    @for $i from 2 through $n {
+        $shadow: append($shadow, #{$i*1px $i*1px $color}, comma);
+    }
+    @return $shadow;
+}

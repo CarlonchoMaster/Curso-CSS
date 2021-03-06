@@ -1,0 +1,59 @@
+*, *::before, *::after {
+    box-sizing: border-box;    
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 500px;  
+    height: 500px;  
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;    
+}
+
+.element {
+    width: 600px;    
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 5rem;
+    color: white;    
+    flex-shrink: 0;
+    scroll-snap-align: end;
+    
+    /* scroll-margin-top: 4rem; */
+}
+
+.element:nth-child(1) {
+    background-color: crimson;
+}
+
+.element:nth-child(2) {
+    background-color: gold;
+}
+
+.element:nth-child(3) {
+    background-color: lightskyblue;
+}
+
+.element:nth-child(4) {
+    background-color: lightgreen;
+}
+
+.element:nth-child(5) {
+    background-color: rebeccapurple;
+    /* scroll-margin-top: 3rem; */
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+html {
+    /* scroll-behavior: smooth;     */
+    /* scroll-padding-top: 4rem;     */
+}

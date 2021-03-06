@@ -1,0 +1,66 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*p::first-letter {
+    font-size: 3rem;
+    color: green;
+}*/
+
+.days-of-week li::first-letter {
+    text-decoration-line: underline;
+    
+}
+
+.temary {
+    counter-reset: classes;
+    margin-left: 1em;
+}
+
+.class {
+    counter-increment: classes;
+    counter-reset: item;
+}
+
+.class-title::before {
+    content: counter(classes) ". ";
+}
+
+.class-topic {
+    counter-increment: item;
+    text-indent: 1em;
+}
+
+.class-topic::before {
+    content: counter(classes) "." counter(item) ". ";
+}
+
+.chapters {
+    counter-reset: chapter-count;
+    margin-left: 1em;
+}
+
+.chapter {
+    counter-increment: chapter-count;
+}
+
+.chapter::before {
+    content: counter(chapter-count) ". ";
+}
+
+ol {
+    counter-reset: ol-count;
+    list-style-type: none;
+}
+
+li {
+    counter-increment: ol-count;
+}
+
+li::before {
+    content: counters(ol-count, '.') '. ';
+}
+
+.attribute::before {
+    content: attr(data-message) ': ';
+}

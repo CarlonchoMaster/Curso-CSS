@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;  
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;  
+    margin: 0.5rem;  
+    gap: .5rem;
+}
+
+p {
+    background-color: yellow;    
+    flex: 1 1 320px;    
+    font-size: 1.5rem;
+}

@@ -1,0 +1,43 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+
+.table {
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+    caption-side: top;
+    table-layout: fixed;
+    empty-cells: hide;
+    width: 100%;    
+}
+
+.tb-row:hover {
+    background-color: #ddd;
+}
+
+.tb-cell:hover {
+    background-color: #bbb;
+}
+
+.table caption {
+    font-weight: 700;
+}
+
+.tb-cell {
+    border: 1px solid #aaa;
+}
+
+.tb-column {
+    background-color: steelblue;
+    color: #fff;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.tb-row:nth-child(3) .tb-cell:first-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,31 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+p:first-child {
+    border-top: 1px solid black;
+}
+
+p:last-child {
+    border-bottom: 1px solid black;
+}
+
+.order-list-01 .order-item:nth-child(even) {
+    text-decoration-line: underline;
+}
+
+.order-list-01 .order-item:nth-child(odd) {
+    text-decoration-line: line-through;
+}
+
+.order-list-02 .order-item:nth-child(4n) {
+    color: green;
+}
+
+strong:nth-last-of-type(2) {
+    color: rebeccapurple;
+}
+
+.table td:empty {
+    background-color: yellow;
+} 

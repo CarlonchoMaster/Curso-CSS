@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;  
+}
+
+:root {
+    --scroll-width: 15px;
+}
+
+body {
+  padding-bottom: 200em;
+}
+
+footer {
+  font-size: 2em;
+  background-color: yellow;
+  width: calc(100vw - var(--scroll-width));
+}

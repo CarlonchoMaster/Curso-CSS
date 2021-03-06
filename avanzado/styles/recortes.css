@@ -1,0 +1,94 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clip-inset: inset(50px 50px 50px 0 round .5rem);
+    --clip-circle: circle(80px at 100px 50%);
+    --clip-ellipse: ellipse(100px 50px at 100px 50%);
+    --clip-polygon: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+.container {
+    outline: 5px solid red;
+}
+
+.clip-path {
+    float: left;
+    width: 300px;
+    height: 300px;    
+}
+
+.inset {
+    clip-path: var(--clip-inset);
+    shape-outside: var(--clip-inset);    
+}
+
+.circle {
+    clip-path: var(--clip-circle);
+    shape-outside: var(--clip-circle);
+}
+
+.ellipse {
+    clip-path: var(--clip-ellipse);
+    shape-outside: var(--clip-ellipse);
+    shape-margin: 1rem;
+}
+
+.polygon {
+    clip-path: var(--clip-polygon);
+    shape-outside: var(--clip-polygon);
+    shape-margin: .5rem;    
+}
+
+.svg {        
+    mask-image: url(/images/react.svg); 
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: 200px;    
+}
+
+.animate {
+    clip-path: polygon(52% 0, 100% 100%, 50% 100%, 0% 100%);;
+    transition: clip-path 2s;
+}
+
+.animate:hover {
+    clip-path: polygon(50% 100%, 100% 0, 50% 0, 0 0);;
+}
+
+img {
+    display: block;    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;    
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
+
+.composite {
+    width: 200px;
+    height: 200px;
+    background-color: red;    
+    mask-image: url(/images/mascaras/mascara-circulo.png), url(https://www.flaticon.com/svg/static/icons/svg/598/598234.svg);
+    mask-repeat: no-repeat;
+    mask-size: 200px, 100px;
+    mask-position: center center;
+    mask-composite: subtract;    
+    -webkit-mask-image: url(/images/mascaras/mascara-circulo.png), url(https://www.flaticon.com/svg/static/icons/svg/598/598234.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 200px, 100px;
+    -webkit-mask-position: center center;
+    -webkit-mask-composite: xor;   
+}

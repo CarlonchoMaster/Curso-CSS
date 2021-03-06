@@ -1,0 +1,86 @@
+*, *::before, *::after {
+    box-sizing: border-box;    
+}
+
+body {    
+    min-height: 100vh;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooltip {
+    background-color: black;
+    color: white;
+    padding: 1rem .75rem;
+    border-radius: .25rem;
+    cursor: pointer;    
+    position: relative;
+}
+
+.tooltip::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: inherit;
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+}
+
+.title-01 {
+    quotes: '\00AB' '\00BB';
+}
+
+.title-01::before {
+    content: open-quote;
+}
+
+.title-01::after {
+    content: close-quote;
+}
+
+.flags {
+    flex-direction: column;
+}
+
+.flag {
+    margin-right: 1rem;  
+    display: flex;
+    align-items: center;     
+}
+
+
+
+.flag::after {
+    content: '';    
+    display: inline-block;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-image: url(https://www.flaticon.com/svg/static/icons/svg/3013/3013911.svg);
+    background-size: contain;
+    margin-left: .5em;
+}
+
+.flag.peru::after {
+    background-image: url(https://www.flaticon.com/svg/static/icons/svg/555/555605.svg);
+}
+
+.flag.mexico::after {
+    background-image: url(https://www.flaticon.com/svg/static/icons/svg/206/206600.svg);
+}
+
+.flag.colombia::after {
+    background-image: url(https://www.flaticon.com/svg/static/icons/svg/3013/3013998.svg);
+}
+
+.money::after {
+    content: attr(data-money-code);    
+} 

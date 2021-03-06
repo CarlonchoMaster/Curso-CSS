@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  background-image: url(/images/elizaveta-boitsova--xHLnHbfeaI-unsplash.jpg);  
+  /* position: absolute; */  
+  height: 25%;
+  background-repeat: no-repeat;  
+  background-size: 200px auto;
+  background-blend-mode: hue;
+}
+
+
+
+.container2 {
+  background-color: green;
+}
+
+.container2 article {
+  position: relative;
+  isolation: isolate;
+}
+
+.container2 p {
+  position: absolute;
+  font-size: 4rem;
+  top: 50%;
+  color: white;
+  font-family: sans-serif;
+  mix-blend-mode: overlay;
+} 
+
+.container2 img {
+  width: 90%;
+  mix-blend-mode: screen;
+}
+

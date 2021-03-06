@@ -1,0 +1,41 @@
+*, *::before, *::after {
+    box-sizing: border-box;    
+}
+
+:root {
+    --blue: 0;
+    --red: 0;
+    --green: 0;
+}
+
+body {    
+    background-color: rgb(var(--red), var(--green), var(--blue));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+label {    
+    background-color: #fff;
+    padding: .5rem;
+    border-radius: .25rem;
+    border: 1px solid #000;
+    margin-bottom: 1rem;       
+    display: flex;   
+    width: 55vw; 
+}
+
+input {
+    width: 40vw;
+    margin-left: auto;
+}
+
+
+
+
+
+
+
+

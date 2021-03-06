@@ -1,0 +1,69 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color: tomato;
+    --color-alt: red;
+}
+
+.button.green {
+    --color: limegreen;
+    --color-alt: green;
+}
+
+.button.blue {
+    --color: cornflowerblue;
+    --color-alt: blue;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.button {
+    padding: 0.5rem .75rem;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    background: var(--color);
+    color: #ffffff;
+    border: 1px solid var(--color);
+}
+
+.button:hover {
+    background: var(--color-alt);
+    border-color: var(--color-alt);
+}
+
+.button.ghost {
+    background: transparent;
+    color: var(--color);
+}
+
+.button.ghost:hover {
+    color: var(--color-alt);
+    border-color: var(--color-alt);
+}
+
+.button.dark {
+    background-color: var(--color-alt);
+    border-color: var(--color-alt);
+}
+
+.button.dark:hover {
+    background-color: var(--color);
+    border-color: var(--color);
+}
+
+.button.transparent {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color);
+}
+
+.button.transparent:hover {
+    color: var(--color-alt);
+    text-decoration: underline;
+}
+

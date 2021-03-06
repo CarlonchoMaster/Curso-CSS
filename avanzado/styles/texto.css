@@ -1,0 +1,116 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --rows-post: 3;
+    --line-height: 1.3rem;
+}
+
+pre, p {
+    background-color: steelblue;
+    color: #111;
+    max-width: 300px;
+    margin-bottom: 1rem;
+}
+
+pre::before, p::before {
+    content: attr(class);
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+}
+
+.white-space .normal {
+    white-space: normal;
+}
+.white-space .pre {
+    white-space: pre;
+}
+.white-space .nowrap {
+    white-space: nowrap;
+}
+.white-space .pre-wrap {
+    white-space: pre-wrap;
+}
+.white-space .pre-line {
+    white-space: pre-line;
+    
+}
+
+.word-break .normal {
+    word-break: normal;
+}
+.word-break .break-all {
+    word-break: break-all;
+}
+.word-break .keep-all {
+    word-break: keep-all;
+}
+
+.overflow-wrap .normal {
+    overflow-wrap: normal;
+}
+.overflow-wrap .break-word {
+    overflow-wrap: break-word;
+}
+.overflow-wrap .anywhere {
+    overflow-wrap: anywhere;
+}
+
+
+.hyphens .none {
+    hyphens: none;
+}
+.hyphens .manual {
+    hyphens: manual;
+}
+.hyphens .auto {
+    hyphens: auto;
+}
+
+.line-clamp .cinco {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.text-overflow p {
+    white-space: nowrap;
+    overflow: hidden;    
+}
+
+.text-overflow .clip {
+    text-overflow: clip;
+}
+
+.text-overflow .ellipsis {
+    text-overflow: ellipsis;
+}
+
+[class^="post"] {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /* -webkit-line-clamp: var(--rows-post); */
+    line-height: var(--line-height);
+    max-height: calc(var(--rows-post) * var(--line-height));
+    overflow: hidden;    
+}
+
+.post-4 {
+    --rows-post: 4;
+}
+
+.post-5 {
+    --rows-post: 5;
+}
+
+.post-6 {
+    --rows-post: 6;
+}
+

@@ -1,0 +1,155 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --hour-width: 1.5em;
+    --hout-height: 1em;
+}
+
+body {
+    display: flex;    
+    min-height: 100vh;    
+    background: #222;    
+    font-family: sans-serif;   
+    justify-content: center; 
+    align-items: center;
+}
+
+.reloj {            
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(#718096, #1A202C);
+    border-radius: 50%;  
+    position: relative;        
+}
+
+.hour-bar {    
+    position: absolute;         
+    left: calc(50% - 1em);    
+    top: 1em;
+    transform-origin: center calc(250px - 1em);
+    color: #fff;    
+    .bar {
+        display: block;
+        width: var(--hour-width);
+        height: var(--hout-height);                
+        &::before {
+            content: '';
+            width: 2px;
+            height: 10px;
+            display: block;
+            background-color: #fff;  
+            margin-left: auto;
+            margin-right: auto;          
+        }
+    }
+    .large::before {
+        width: 6px;
+        height: 18px;
+    }
+    
+}
+
+@for $var from 1 through 60 {
+    .hour-bar:nth-child(#{$var}) {
+        transform: rotate(#{$var * 6deg});        
+    }    
+}
+
+.hour-number {
+    position: absolute;          
+    left: calc(50% - 1.25em);    
+    top: 2.5em;
+    transform-origin: center calc(250px - 2.5em);
+    color: #fff;
+    .number {
+        display: block;
+        width: var(--hour-width);
+        height: var(--hout-height);
+        text-align: center;
+        font-size: 1.5rem;        
+    }
+}
+
+@for $var from 1 through 12 {
+    .hour-number-#{$var} {
+        transform: rotate(#{$var * 30deg});        
+        .number {
+            transform: rotate(#{$var * -30deg});
+        }
+    }        
+}
+
+.aguja {
+    width: 2px;
+    height: 170px;
+    background-color: #fff;
+    position: absolute;
+    top: 80px;
+    left: 249px;
+    transform-origin: center bottom;
+    &.segundos {
+        animation: segundos 60s infinite steps(59);
+        background-color: red;
+        position: relative; 
+        height: 200px;
+        transform-origin: center 170px;                               
+    }
+
+    @keyframes segundos {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+
+    &.minutos {
+        animation: minutos 3600s infinite linear;
+        width: 4px;
+        left: 248px;
+        &::before {
+            content: '';
+            position: absolute;            
+            width: 0;
+            height: 0;
+            left: 0;
+            top: -2px;
+            border-width: 0 2px 2px;
+            border-style: solid;
+            border-color: transparent transparent white;
+        }        
+    }
+
+    @keyframes minutos {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+
+    &.horas {
+        width: 6px;
+        left: 247px;
+        &::before {
+            content: '';
+            position: absolute;            
+            width: 0;
+            height: 0;
+            left: 0;
+            top: -3px;
+            border-width: 0 3px 3px;
+            border-style: solid;
+            border-color: transparent transparent white;
+        }
+    }
+}
+
+.circle {
+    position: absolute;
+    width: 1.4em;
+    height: 1.4em;
+    background-color: red;
+    border-radius: 50%;
+    left: 50%;    
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

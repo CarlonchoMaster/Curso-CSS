@@ -1,0 +1,49 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-bottom: 1rem;
+}
+
+.description {
+    resize: both;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.fade-textarea {
+    resize: both;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.text-control:focus {
+    background-color: steelblue;
+}
+
+.form:focus-within {
+    background-color: indianred;
+}
+
+.custom-placeholder {
+    position: relative;
+}
+
+.custom-placeholder label {
+    position: absolute;
+    left: 0.25rem;
+    opacity: .5;
+}
+
+.custom-placeholder input:focus + label,
+.custom-placeholder input:not(:placeholder-shown) + label {
+    display: none;
+}
+
+
+
